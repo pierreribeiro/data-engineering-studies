@@ -1,4 +1,4 @@
-"""""
+"""
 # Exercício 1: Crie um programa que solicite ao usuário dois números inteiros e exiba a soma deles.
 numero_1 = int(input("Digite o primeiro número: "))
 numero_2 = int(input("Digite o segundo número: "))
@@ -26,7 +26,10 @@ numero_2 = int(input("Digite o segundo número: "))
 
 resultado = numero_1 // numero_2
 print("O resultado da divisão é:", resultado)
-""" ""
+"""
+
+import math
+
 # Exercício 5: Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 numero = int(input("Digite um número: "))
 quadrado = numero**2
@@ -58,7 +61,6 @@ fahrenheit = (celsius * 9 / 5) + 32
 print("A temperatura em Fahrenheit é:", fahrenheit)
 
 # Exercício 10: Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
-import math
 
 raio = float(input("Digite o raio do círculo: "))
 area = math.pi * raio**2
