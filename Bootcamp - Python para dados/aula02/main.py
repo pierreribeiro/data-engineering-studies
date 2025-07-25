@@ -26,7 +26,7 @@ numero_2 = int(input("Digite o segundo número: "))
 
 resultado = numero_1 // numero_2
 print("O resultado da divisão é:", resultado)
-"""
+
 
 import math
 
@@ -67,3 +67,30 @@ area = math.pi * raio**2
 print("A área do círculo é:", area)
 
 # Exercício 11: Crie um programa que converta um valor em metros para centímetros.
+"""
+
+# Exercício 21: Conversor de Temperatura Escreva um programa que converta a temperatura de Celsius para Fahrenheit.
+# O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando try-except, garantir que a entrada seja numérica, tratando qualquer ValueError.
+# Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+celsius = input("Digite a temperatura em Celsius: ")
+try:
+    celsius = float(celsius)
+    fahrenheit = (celsius * 9 / 5) + 32
+    print("A temperatura em Fahrenheit é:", fahrenheit)
+except ValueError:
+    print("Por favor, insira um número válido para a temperatura em Celsius.")
+
+# Exercício 22: Verificador de Palíndromo
+# Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações).
+# Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada
+entrada = input("Digite uma palavra ou frase: ")
+try:
+    if not isinstance(entrada, str):
+        raise ValueError("A entrada deve ser uma string.")
+    entrada = entrada.replace(" ", "").lower()
+    if entrada == entrada[::-1]:
+        print("É um palíndromo.")
+    else:
+        print("Não é um palíndromo.")
+except ValueError as e:
+    print(e)
